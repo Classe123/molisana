@@ -1,6 +1,6 @@
 <template>
     <div class="col-12 col-md-4">
-                    <h5>{{ title }}</h5>
+                    <h4>{{ title }}</h4>
                     <ul>
                             <li v-for="(item, index) in items" :key="index">
                                 <a :href="item.url">{{ item.text }}</a>

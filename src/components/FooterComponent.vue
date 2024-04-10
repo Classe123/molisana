@@ -82,12 +82,36 @@ export default {
 </script>
 
 <style lang="scss" >
+@use '../assets/styles/partials/variables' as *;
 footer {
     background-image: url('../assets/img/footer-montagne-bottom.jpg');
     background-position: bottom;
     background-repeat: no-repeat;
-    ul{
+    padding: 20px 0;
+
+    h4 {
+            text-transform: uppercase;
+            font-size: 1.25em;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: $bluetext;
+        }
+    ul {
         list-style: none;
+        margin:0;
+        padding:0;
+        li a {
+                display: inline-block;
+                margin-bottom: 0.25rem;
+                text-decoration: none;
+                font-size: 0.875em;
+
+
+                &:hover {
+                    color: $bluetext;
+                }
+            }
+        }
     }
-}
+
 </style>

@@ -13,10 +13,11 @@
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
     main{
         background-image: url('../assets/img/fondo-pag-speciali.jpg');
         h2{
-            color: blue;
+            color: $bluetext;
             text-align: center;
         }
     }
