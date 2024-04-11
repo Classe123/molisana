@@ -5,14 +5,27 @@
                 <div class="col-12 col-md-4">
                     <img src="../assets/img/la-molisana-logo.png" alt="Logo">
                 </div>
-                <MenuComponent v-for="(item, index) in menu" :key="index" :title="item.title" :items="item.links" />
-                
+                <MenuComponent v-for="(item, index) in menu" :key="index" :menuItem="item"  @pippo="changeTitle"/>
+                <!-- mi devi passare un oggetto così strutturato 
+                    {
+                        title: String,
+                        links:[
+                                {
+                                    text:string, 
+                                    url:string
+                                },
+                                ....
+                            ]
+                    } 
+                    e mette a disposizione un evento @pippo e ritorna un nuovo titolo
+                -->
             </div>
         </div>
     </footer>
 </template>
 
 <script>
+import {footerMenu} from '../data/store.js';
 import MenuComponent from './MenuComponent.vue';
 export default {
     name: 'FooterComponent',
@@ -21,61 +34,12 @@ export default {
     },
     data() {
         return {
-            menu: [
-                {
-                    title: 'Pastificio',
-                    links: [
-                        {
-                            text: "Il Pastificio",
-                            url: "#",
-                        },
-                        {
-                            text: "Grano",
-                            url: "#",
-                        },
-                        {
-                            text: "Filiera",
-                            url: "#",
-                        },
-                        {
-                            text: "100 anni di pasta",
-                            url: "#",
-                        },
-                        {
-                            text: "Sartoria della pasta",
-                            url: "#",
-                        }
-
-                    ]
-                },
-                {
-                    title: 'Prodotti',
-                    links: [
-                        {
-                            text: "Le classiche",
-                            url: "#",
-                        },
-                        {
-                            text: "Le Integrali",
-                            url: "#",
-                        },
-                        {
-                            text: "Le Speciali",
-                            url: "#",
-                        },
-                        {
-                            text: "Le Biologiche",
-                            url: "#",
-                        },
-                        {
-                            text: "SLe Gluten-free",
-                            url: "#",
-                        }
-                    ]
-                },
-
-            ]
-
+            menu: footerMenu
+        }
+    },
+    methods:{
+        changeTitle(title){
+            this.menu[0].title = title;
         }
     }
 }
@@ -90,7 +54,7 @@ footer {
     padding: 20px 0;
 
     h4 {
-            text-transform: uppercase;
+            // text-transform: uppercase;
             font-size: 1.25em;
             font-weight: 600;
             margin-bottom: 1rem;

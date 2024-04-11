@@ -12,28 +12,12 @@
 </template>
 
 <script>
+import {menu} from '../data/store.js';
     export default {
         name:'HeaderComponent',
         data() {
                 return {
-                   menu: [
-                       {
-                           name: 'Home',
-                           url: '#'
-                       },
-                       {
-                           name: 'Prodotti',
-                           url: '#'
-                       },
-                       {
-                           name: 'Chi siamo',
-                           url: '#'
-                       },
-                       {
-                           name: 'Contatti',
-                           url: '#'
-                       }
-                   ] 
+                   menu: menu
             }
         }
     }
