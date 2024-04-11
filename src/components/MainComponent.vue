@@ -29,7 +29,8 @@
         },
         methods: {
             removePasta(index){
-                    this.products.splice(index,1);
+                    prodotti.splice(index,1);
+                    console.log(this.products);
             }
         },
         mounted(){
