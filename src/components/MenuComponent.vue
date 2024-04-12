@@ -24,8 +24,12 @@
         methods:{
            cambiaTitolo(){
             this.$emit('pippo',this.variabile1);
+           },
+           prova(){
+
            }
         },
+        
         computed:{
             titleUppercase(){
                 return this.menuItem.title.toUpperCase();
