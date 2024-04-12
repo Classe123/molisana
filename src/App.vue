@@ -13,7 +13,8 @@
     components: {
       HeaderComponent,
       MainComponent,
-      FooterComponent
+      FooterComponent,
+      
     }
   }
 </script>
