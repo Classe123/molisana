@@ -12,8 +12,10 @@
 <script>
 export default {
     name: 'CardComponent',
-    props: ['image', 'title', 'text','link']
+    props: ['image', 'title', 'text','link'],
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>
